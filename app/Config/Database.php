@@ -31,7 +31,6 @@ class Database extends Config
 	 * @var array
 	 */
 	public $default = [
-<<<<<<< HEAD
 		'DSN'      => 'pgsql:host=ec2-54-145-102-149.compute-1.amazonaws.com;port=5432;dbname=d1adamc1gnepo3',
 		'hostname' => 'ec2-54-145-102-149.compute-1.amazonaws.com',
 		'username' => 'uhcvnkvhygxrgp',
