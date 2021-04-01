@@ -90,7 +90,7 @@ class Authenticator extends Controller
 		{
                         return "error occured."
 			//return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
-		}else
+		}else{
                   return "Logged in";
 		} 
 		// Is the user being forced to reset their password?
