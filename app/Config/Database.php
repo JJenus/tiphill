@@ -38,15 +38,7 @@ class Database extends Config
 		'password' => 'af06d8a165e47e719558d715312c286fea4a12cab00305f8b0695727a88edada',
 		'database' => 'd1adamc1gnepo3',
 		'DBDriver' => 'Postgre',
-=======
-		'DSN'      => '',
-		'hostname' => '',
-		'username' => '',
-		'password' => '',
-		'database' => APPPATH. 'Database/hill.db',
-		'DBDriver' => 'SQLite3',
->>>>>>> c9a3d648b0eceed38fe622da50807bca4dadebf0
-		'DBPrefix' => '',
+    'DBPrefix' => '',
 		'pConnect' => false,
 		'DBDebug'  => (ENVIRONMENT !== 'production'),
 		'charset'  => 'utf8',
