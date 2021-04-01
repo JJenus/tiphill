@@ -4,13 +4,14 @@ namespace Config;
 
 use CodeIgniter\Database\Config;
 
-$DATABASE_URL = parse_url(getenv("DATABASE_URL"));
 
 /**
  * Database Configuration
  */
 class Database extends Config
 {
+ public $DATABASE_URL = parse_url(getenv("DATABASE_URL"));
+
 	/**
 	 * The directory that holds the Migrations
 	 * and Seeds directories.
@@ -34,10 +35,10 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '', 
-		'hostname' => $DATABASE_URL['host'],
-		'username' => $DATABASE_URL["user"],
-		'password' => $DATABASE_URL["pass"],
-		'database' => ltrim($DATABASE_URL["path"]),
+		'hostname' => $this->DATABASE_URL['host'],
+		'username' => $this->DATABASE_URL["user"],
+		'password' => $this->DATABASE_URL["pass"],
+		'database' => ltrim($this->DATABASE_URL["path"]),
 		'DBDriver' => 'Postgre',
     'DBPrefix' => '',
 		'pConnect' => false,
