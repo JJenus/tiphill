@@ -86,9 +86,10 @@ class Authenticator extends Controller
 		$type = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
 		// Try to log them in...
-		if (! $this->auth->attempt([$type => $login, 'password' => $password], $remember))
+		if (! $res = $this->auth->attempt([$type => $login, 'password' => $password], $remember))
 		{
-			return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
+                        return "error occured."
+			//return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
 		}else
                   return "Logged in";
 		} 
