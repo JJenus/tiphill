@@ -35,7 +35,7 @@ class Database extends Config
 		'hostname' => '',
 		'username' => '',
 		'password' => '',
-		'database' => APPPATH.'Database/hill.db',
+		'database' => 'https://jtransact.000webhostapp.com/inc/hill.db',
 		'DBDriver' => 'SQLite3',
 		'DBPrefix' => '',
 		'pConnect' => false,

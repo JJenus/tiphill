@@ -76,6 +76,8 @@ class Authenticator extends Controller
 			return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
 		}
 
+
+
 		$login = $this->request->getPost('login');
 		$password = $this->request->getPost('password');
 		$remember = (bool)$this->request->getPost('remember');
@@ -84,11 +86,13 @@ class Authenticator extends Controller
 		$type = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
 
 		// Try to log them in...
-		if (! $this->auth->attempt([$type => $login, 'password' => $password], $remember))
+		if (! $res = $this->auth->attempt([$type => $login, 'password' => $password], $remember))
 		{
-			return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
-		}
-
+                        return "error occured.";
+			//return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
+		}else{
+                  return "Logged in";
+		} 
 		// Is the user being forced to reset their password?
 		if ($this->auth->user()->force_pass_reset === true)
 		{
