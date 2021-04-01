@@ -1,0 +1,68 @@
+window.__I18N__={"lng":"en-GB","store":{"en-GB":{"translation":{"Начало":"Start","Конец":"End","Выберите...":"Select...","Отмена":"Cancel","OK":"OK","Выберите тему":"Choose theme","Слишком много запросов. Пожалуйста, повторите запрос позже":"Too many attempts. Please try again later","У вас не осталось попыток. Пожалуйста, повторите запрос позже":"No attempts left. Please try again later","Поле должно быть заполнено":"This field cannot be empty","Содержит недопустимые символы":"Contains invalid characters","Слабый пароль":"Weak password","Не совпадает с паролем":"Passwords do not match","Неверный временный код":"One-time passcode incorrect","Не менее {min} символов":"No fewer than {min} characters","Не более {max} символов":"No more than {max} characters","Задать вопрос":"Ask a question","Онлайн консультант":"Online consultant","Произошел разрыв соединения. Пожалуйста, перезагрузите страницу.":"Connection lost. Please refresh the page.","Консультант":"Consultant","Оценить работу":"Rate","Благодарим вас за оценку консультанта":"Thanks for rating","Оставьте отзыв о консультанте":"Give us feedback about a consultant","При установке соединения произошла ошибка":"Connection error","Отправить":"Send","Отсутствует соединение":"Not connected","Страница не найдена":"Page not found","На главную":"Go to home page","Что-то пошло не так":"Something went wrong","C уважением,":"Yours faithfully,","Подтверждение адреса электронной почты":"Confirm email address","Восстановление пароля":"Password recovery","Вход с неизвестного устройства":"Sign-in from an unknown device","Чтобы завершить регистрацию учетной записи, необходимо убедиться, что этот адрес электронной почты принадлежит вам.":"To complete registration, we need to ensure that this email address belongs to you.","Чтобы подтвердить свой адрес электронной почты, используйте этот код безопасности:":"To verify your email address, use this security code:","Если вы не запрашивали этот код, то можете просто проигнорировать это письмо. Кто-то мог сделать запрос на ваш адрес электронной почты по ошибке.":"If you did not request this code, please ignore this email. Someone may have entered your email address by mistake when requesting a code.","Используйте этот код, чтобы сбросить пароль для учетной записи":"Use this code to reset the password for your account","Ваш код восстановления пароля:":"Your password recovery code:","Попытка входа с неизвестного устройства заблокирована":"A sign-in attempt from an unknown device has been blocked","Обнаружен вход с неизвестного устройства":"A sign-in from an unknown device has been detected","Время":"Time","Местонахождение":"Location","Неизвестно":"Unknown","Устройство":"Device","Браузер":"Browser","Чтобы разблокировать вход с неизвестного устройства, необходимо подтвердить свое местонахождение при помощи этого кода безопасности:":"To unblock sign-in from an unknown device, you need to confirm your location using this security code:","Если вы не узнаете этот вход, срочно смените пароль и подключите двухфакторную аутентификацию!":"If you don't recognize this sign-in, change your password immediately and enable 2FA!","Если вы не узнаете этот вход, срочно смените пароль!":"If you don't recognize this sign-in, change your password immediately!","Закрыть":"Close","Отменить":"Cancel","Верификация аккаунта":"Account verification","Другое":"Other","Выберите тему обращения":"Select subject","Изменить оценку":"Change rating","{loaded} из {total}":"{loaded} of {total}","Отпустите мышку, чтобы загрузить файлы":"Drop the file here to upload it","Написать сообщение...":"Type a message...","Оператор ответит {from_time}":"The operator will reply {from_time}","Оператор скоро ответит":"The operator will reply as soon as possible","Платежи (депозиты и выводы)":"Payments (deposits and withdrawals)","Бонусы":"Bonuses","Игры (наличие, проблемы)":"Games (availability, queries)","Аккаунт":"Account","Сотрудничество":"Collaboration","Блокировка аккаунта":"Account blocking","Жалобы и предложения":"Queries and suggestions","Ваш запрос был отправлен. Мы обработаем ваш запрос и свяжемся с вами в ближайшее время.":"Your query has been sent. We will process it and get back to you shortly.","Если Вам не удалось найти ответ на свой вопрос, пожалуйста, напишите нам.":"If you couldn't find an answer to your question, please write to us.","Ваше имя":"First name","Ваш e-mail":"Your email address","Введите сообщение...":"Enter your message…","Не удалось отправить":"Failed to send","К сожалению, нам не удалось найти свободного оператора.":"Unfortunately, there are no operators available at the moment."," Вы можете найти ответ на свой вопрос здесь {link}.":" You can find an answer to your question here {link}."}}}};
+window.initMomentLocale = function(){ //! moment.js locale configuration
+
+;(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined'
+       && typeof require === 'function' ? factory(require('../moment')) :
+   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
+   factory(global.moment)
+}(this, (function (moment) { 'use strict';
+
+
+    var enGb = moment.defineLocale('en-gb', {
+        months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
+        monthsShort : 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
+        weekdays : 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
+        weekdaysShort : 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'),
+        weekdaysMin : 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
+        longDateFormat : {
+            LT : 'HH:mm',
+            LTS : 'HH:mm:ss',
+            L : 'DD/MM/YYYY',
+            LL : 'D MMMM YYYY',
+            LLL : 'D MMMM YYYY HH:mm',
+            LLLL : 'dddd, D MMMM YYYY HH:mm'
+        },
+        calendar : {
+            sameDay : '[Today at] LT',
+            nextDay : '[Tomorrow at] LT',
+            nextWeek : 'dddd [at] LT',
+            lastDay : '[Yesterday at] LT',
+            lastWeek : '[Last] dddd [at] LT',
+            sameElse : 'L'
+        },
+        relativeTime : {
+            future : 'in %s',
+            past : '%s ago',
+            s : 'a few seconds',
+            ss : '%d seconds',
+            m : 'a minute',
+            mm : '%d minutes',
+            h : 'an hour',
+            hh : '%d hours',
+            d : 'a day',
+            dd : '%d days',
+            M : 'a month',
+            MM : '%d months',
+            y : 'a year',
+            yy : '%d years'
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}(st|nd|rd|th)/,
+        ordinal : function (number) {
+            var b = number % 10,
+                output = (~~(number % 100 / 10) === 1) ? 'th' :
+                (b === 1) ? 'st' :
+                (b === 2) ? 'nd' :
+                (b === 3) ? 'rd' : 'th';
+            return number + output;
+        },
+        week : {
+            dow : 1, // Monday is the first day of the week.
+            doy : 4  // The week that contains Jan 4th is the first week of the year.
+        }
+    });
+
+    return enGb;
+
+})));
+ }
