@@ -10,8 +10,7 @@ use CodeIgniter\Database\Config;
  */
 class Database extends Config
 {
- public $DATABASE_URL = parse_url(getenv("DATABASE_URL"));
-
+ 
 	/**
 	 * The directory that holds the Migrations
 	 * and Seeds directories.
@@ -34,11 +33,11 @@ class Database extends Config
 	 * @var array
 	 */
 	public $default = [
-		'DSN'      => '', 
-		'hostname' => $this->DATABASE_URL['host'],
-		'username' => $this->DATABASE_URL["user"],
-		'password' => $this->DATABASE_URL["pass"],
-		'database' => ltrim($this->DATABASE_URL["path"]),
+		'DSN'      => 'pgsql:host=ec2-54-145-102-149.compute-1.amazonaws.com;port=5432;dbname=d1adamc1gnepo3',
+		'hostname' => 'ec2-54-145-102-149.compute-1.amazonaws.com',
+		'username' => 'uhcvnkvhygxrgp',
+		'password' => 'af06d8a165e47e719558d715312c286fea4a12cab00305f8b0695727a88edada',
+		'database' => 'd1adamc1gnepo3',
 		'DBDriver' => 'Postgre',
     'DBPrefix' => '',
 		'pConnect' => false,
