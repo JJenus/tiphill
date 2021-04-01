@@ -84,7 +84,7 @@ class Authenticator extends Controller
 
 		// Determine credential type
 		$type = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-
+return "before login you";
 		// Try to log them in...
 		if (! $this->auth->attempt([$type => $login, 'password' => $password], $remember))
 		{
