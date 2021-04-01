@@ -62,7 +62,6 @@ class Authenticator extends Controller
 	 */
 	public function attemptLogin()
 	{
-return "fuck you";
 		$rules = [
 			'login'	=> 'required',
 			'password' => 'required',
@@ -77,6 +76,8 @@ return "fuck you";
 			return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
 		}
 
+
+
 		$login = $this->request->getPost('login');
 		$password = $this->request->getPost('password');
 		$remember = (bool)$this->request->getPost('remember');
@@ -89,7 +90,7 @@ return "fuck you";
 		{
 			return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
 		}
-
+return "Logged in";
 		// Is the user being forced to reset their password?
 		if ($this->auth->user()->force_pass_reset === true)
 		{
