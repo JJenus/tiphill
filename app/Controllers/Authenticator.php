@@ -62,6 +62,7 @@ class Authenticator extends Controller
 	 */
 	public function attemptLogin()
 	{
+return "fuck you";
 		$rules = [
 			'login'	=> 'required',
 			'password' => 'required',
