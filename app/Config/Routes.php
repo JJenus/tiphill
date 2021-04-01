@@ -37,6 +37,8 @@ $routes->get('admin/(:segment)', 'Admin::view/$1');
 $routes->get('ticket/(:segment)', 'Home::view/$1');
 $routes->get('admin/create/(:segment)', 'Admin::createAdmin/$1');
 
+$routes->get('migrate', 'Migratehill::index');
+
 $routes->match(
   ['get', 'post'], 
   'create_ticket',
