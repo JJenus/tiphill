@@ -10,11 +10,16 @@ class Migratehill extends \CodeIgniter\Controller
 
                 try
                 {
-                        $migrate->latest();
+                        if ($migrate->latest()) {
+                          return "<h1>Migration Complete</h1>";
+                        } else {
+                         return "Unknown error occurred";
+                        }
+                        
                 }
                 catch (\Throwable $e)
                 {
-                  return $e;
+                  return "ERROR: ". $e;
                         // Do something with the error here...
                 }
         }

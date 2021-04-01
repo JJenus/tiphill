@@ -4,6 +4,8 @@ namespace Config;
 
 use CodeIgniter\Database\Config;
 
+$DATABASE_URL = parse_url(getenv("DATABASE_URL"));
+
 /**
  * Database Configuration
  */
@@ -31,11 +33,11 @@ class Database extends Config
 	 * @var array
 	 */
 	public $default = [
-		'DSN'      => 'pgsql:host=ec2-54-145-102-149.compute-1.amazonaws.com;port=5432;dbname=d1adamc1gnepo3',
-		'hostname' => 'ec2-54-145-102-149.compute-1.amazonaws.com',
-		'username' => 'uhcvnkvhygxrgp',
-		'password' => 'af06d8a165e47e719558d715312c286fea4a12cab00305f8b0695727a88edada',
-		'database' => 'd1adamc1gnepo3',
+		'DSN'      => '', 
+		'hostname' => $DATABASE_URL['host'],
+		'username' => $DATABASE_URL["user"],
+		'password' => $DATABASE_URL["pass"],
+		'database' => ltrim($DATABASE_URL["path"]),
 		'DBDriver' => 'Postgre',
     'DBPrefix' => '',
 		'pConnect' => false,
