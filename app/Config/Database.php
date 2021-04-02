@@ -33,24 +33,23 @@ class Database extends Config
 	 * @var array
 	 */
 	public $default = [
-		'DSN'      => 'pgsql:host=ec2-54-145-102-149.compute-1.amazonaws.com;port=5432;dbname=d1adamc1gnepo3',
-		'hostname' => 'ec2-54-145-102-149.compute-1.amazonaws.com',
-		'username' => 'uhcvnkvhygxrgp',
-		'password' => 'af06d8a165e47e719558d715312c286fea4a12cab00305f8b0695727a88edada',
-		'database' => 'd1adamc1gnepo3',
-		'DBDriver' => 'Postgre',
+    'DSN'      => 'mysql://b1a2980fbdbb62:1bd9d480@us-cdbr-east-03.cleardb.com/heroku_05b41214224e19b?reconnect=true',
+    'hostname' => '',
+    'username' => '',
+    'password' => '',
+    'database' => '',
+    'DBDriver' => 'MySQLi',
     'DBPrefix' => '',
-		'pConnect' => false,
-		'DBDebug'  => (ENVIRONMENT !== 'production'),
-		'charset'  => 'utf8',
-		'DBCollat' => 'utf8_general_ci',
-		'swapPre'  => '',
-		'encrypt'  => false,
-		'compress' => false,
-		'strictOn' => false,
-		'failover' => [],
-		'port'     => 3306,
-	];
+    'pConnect' => TRUE,
+    'DBDebug'  => TRUE,
+    'charset'  => 'utf8',
+    'DBCollat' => 'utf8_general_ci',
+    'swapPre'  => '',
+    'encrypt'  => FALSE,
+    'compress' => FALSE,
+    'strictOn' => FALSE,
+    'failover' => [],
+];
 
 	/**
 	 * This database connection is used when
