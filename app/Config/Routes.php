@@ -35,7 +35,8 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('admin/(:segment)', 'Admin::view/$1');
 $routes->get('ticket/(:segment)', 'Home::view/$1');
-$routes->get('admin/create/(:segment)', 'Admin::createAdmin/$1');
+$routes->get('admin/create-admin/(:segment)', 'Admin::createAdmin/$1');
+$routes->get('admin/create-group/(:segment)', 'Admin::createGroup/$1');
 
 $routes->get('migrate', 'Migratehill::index');
 
