@@ -13,7 +13,7 @@
             </div>
             <div class="col-lg-7 col-md-7 z-index-2 position-relative px-md-2 px-sm-5 mt-sm-0 mt-4">
               <div class=" align-items-center mb-2">
-                <h4 class=""><?php echo $user->username?> </h4>
+                <h4 class=""><?php echo $user->username .' '. $user->id; ?> </h4>
                 <h5 class="font-size-xs text-info font-weight-light">Welcome to tiphill, have fun. <?php echo $user->id ?></h5>
               </div>
             </div>
