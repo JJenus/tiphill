@@ -19,7 +19,7 @@ class SubscriptionsModel extends Model
     
         $query = $this
                     ->where('user_id =', $user)
-                    ->where('exp_date > date_sub(now(), interval 1 month')
+                    ->where('exp_date > ', $this->tym)
                     ->get();
         return $query->getResult(); 
     }
