@@ -14,12 +14,12 @@ class SubscriptionsModel extends Model
       $this->tym = date("Y-m-d 13:03:19", strtotime('first day of previous month'));
         if ($user === false)
         {
-            return null;
+            return null; #  event_date > date_sub(now(), interval 1 week);
         }
     
         $query = $this
                     ->where('user_id =', $user)
-                    ->where('DATETIME(exp_date) >', $this->tym)
+                    ->where('exp_date > date_sub(now(), interval 1 month')
                     ->get();
         return $query->getResult(); 
     }
