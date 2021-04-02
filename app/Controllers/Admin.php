@@ -20,7 +20,7 @@ class Admin extends Controller
 
 	public function __construct()
 	{
-	  #$this->restrictToGroups(['admin'] , route_to('home') );
+	  $this->restrictToGroups(['admin'] , route_to('home') );
 		
 		// Most services in this controller require
 		// the session to be started - so fire it up!
