@@ -88,11 +88,8 @@ class Authenticator extends Controller
 		// Try to log them in...
 		if (! $res = $this->auth->attempt([$type => $login, 'password' => $password], $remember))
 		{
-                        return "error occured.";
-			//return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
-		}else{
-                  return "Logged in";
-		} 
+      return redirect()->back()->withInput()->with('error', $this->auth->error() ?? lang('Auth.badAttempt'));
+		}
 		// Is the user being forced to reset their password?
 		if ($this->auth->user()->force_pass_reset === true)
 		{

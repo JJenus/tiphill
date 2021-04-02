@@ -20,7 +20,7 @@ class Admin extends Controller
 
 	public function __construct()
 	{
-	  $this->restrictToGroups(['admin'] , route_to('home') );
+	  #$this->restrictToGroups(['admin'] , route_to('home') );
 		
 		// Most services in this controller require
 		// the session to be started - so fire it up!
@@ -78,8 +78,7 @@ class Admin extends Controller
       $this->setupAuthClasses();
     	
       $id = $this->authorize->addUserToGroup(intval($userId) , 'admin');
-      #$id = $this->authorize->createGroup($group, 'Users with Odin access in the app.');
-    
+      
     	if($id){
     	  echo "created Admin  ".$userId." with id: ".$id;
     	} else{
@@ -95,6 +94,21 @@ class Admin extends Controller
             echo view('news/success');
         }
         */
+        
+    }
+    
+    public function createGroup($group)
+    {
+      
+      $this->setupAuthClasses();
+    	
+      $id = $this->authorize->createGroup($group, 'Users with Odin access in the app.');
+    
+    	if($id){
+    	  echo "Group  ".$group." Created id: ".$id;
+    	} else{
+    	  echo $userId. ' failed: ';
+    	}
         
     }
 
