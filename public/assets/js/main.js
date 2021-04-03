@@ -17,12 +17,10 @@ async function myFetch() {
 $(function(){
  // 
     myFetch().then((json) => {
-      alert(json.verify)
       if (json.verify) {
         //$('body').toggleClass('hide-all');
         $('.pre-box').addClass('hide-all');
       }else {$('body').addClass('hide-all');} 
-
     })
     .catch((e) =>{
       $('body').addClass('hide-all');
