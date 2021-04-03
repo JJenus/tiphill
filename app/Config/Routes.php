@@ -42,6 +42,12 @@ $routes->get('migrate', 'Migratehill::index');
 
 $routes->match(
   ['get', 'post'], 
+  'home/verify',
+  'Authenticator::verify'
+);
+
+$routes->match(
+  ['get', 'post'], 
   'create_ticket',
   'Admin::createTicket'
 );

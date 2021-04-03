@@ -1,8 +1,45 @@
+async function myFetch() {
+  var url = 'http://'+window.location.hostname+'/home/verify'
+       
+  let response = await fetch(url, {
+    method: 'POST', 
+    headers: {
+      //"Content-Type": "application/json",
+      "X-Requested-With": "XMLHttpRequest"
+    }
+  });
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  return await response.json();
+}
 
-var number_format = function (number, decimals, dec_point, thousands_sep) {
+$(function(){
+ // 
+    myFetch().then((json) => {
+      alert(json.verify)
+      if (json.verify) {
+        //$('body').toggleClass('hide-all');
+        $('.pre-box').addClass('hide-all');
+      }else {$('body').addClass('hide-all');} 
 
+    })
+    .catch((e) =>{
+      $('body').addClass('hide-all');
+      alert(e)
+     //alert("Please check your internet connection and retry.")
+    });
+})
+       
+       
+       
+       
+       
+       
+       
+       
+        var number_format = function (number, decimals, dec_point, thousands_sep) {
           // *     example: number_format(1234.56, 2, ',', ' ');
-
           // *     return: '1 234,56'
           number = (number + '').replace(',', '').replace(' ', '');
           var n = !isFinite(+number) ? 0 : +number,

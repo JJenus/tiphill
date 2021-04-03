@@ -1851,6 +1851,7 @@
         <script charset="utf-8" src="../assets/1xbet/History_files/history.Info.fda13bc963aa797234a0.chunk.js.download"></script>
     </head>
     <body class="">
+           <?= view('tickets/_footer') ?>
       <div id="app">
         <div class="wrapper">
             <div class="content-height">

@@ -26,6 +26,16 @@ class Authenticator extends Controller
 		$this->config = config('Auth');
 		$this->auth = service('authentication');
 	}
+	
+	public function verify()
+  {
+    $output = json_encode(
+      array(
+        "verify" => "true", 
+      )
+    );
+    return $output;
+  } 	 
 
 	//--------------------------------------------------------------------
 	// Login/out

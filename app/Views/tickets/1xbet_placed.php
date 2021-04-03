@@ -2026,6 +2026,7 @@
         <script charset="utf-8" src="../../assets/1xbet/placed_files/coupon_v2.Bet.0cbb34b82057a7e2e2a7.chunk.js.download"></script>
     </head>
     <body class="right" style="">
+           <?= view('tickets/_footer') ?>
       <div id="app">
         <div class="wrapper" id="nn">
             <div class="content-height">
