@@ -161,13 +161,13 @@
           <th colspan="4" style="">Stake</th>
           <th colspan="4" style="text-align: right;"><span id="stake" class="edit money">50</span> <span class="edit">EUR</span></th>
         </tr>
-
+<!-- EDITED -->
         <tr>
           <th colspan="6" style="">Total odds</th>
           <th colspan="6" class="edit money" style="text-align: right; " id="totalodd">132.50</th>
         </tr>
         <tr class="">
-          <th colspan="4" style="">Posible winnings</th>
+          <th colspan="4" style="">Possible winnings</th>
           <th colspan="4" style="text-align: right; "><span id="outcome" class="edit money">6625</span> <span class="edit">EUR</span></th>
         </tr>
       </table>
