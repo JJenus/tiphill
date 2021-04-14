@@ -38,7 +38,7 @@
             
                       <a href="<?php echo base_url(). '/ticket/'.$ticket->ticket ?>" class=" btn btn-primary d-flex justify-content-between align-items-center ">
                         <?= esc($ticket->ticket) ?> 
-                        <span class="badge badge-success badge-pill"><?= esc(date("d M, Y", strtotime($ticket->exp_date)) ) ?></span>
+                       <!-- <span class="badge badge-success badge-pill"><?= esc(date("d M, Y", strtotime($ticket->exp_date)) ) ?></span> -->
                       </a> 
                       
                   <?php endforeach; ?>
@@ -64,7 +64,7 @@
             
                       <a class=" btn btn-outline-danger d-flex justify-content-between align-items-center ">
                         <?= esc($ticket->ticket) ?> 
-                        <span class="badge badge-success badge-pill"><?= esc(date("d M, Y", strtotime($ticket->exp_date)) ) ?></span>
+                        <!-- <span class="badge badge-success badge-pill"><?= esc(date("d M, Y", strtotime($ticket->exp_date)) ) ?></span> -->
                       </a> 
                       
                   <?php endforeach; ?>
