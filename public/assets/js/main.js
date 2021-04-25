@@ -1,5 +1,5 @@
 async function myFetch() {
-  var url = 'http://'+window.location.hostname+':8080/home/verify'
+  var url = 'http://'+window.location.hostname+'/home/verify'
        
   let response = await fetch(url, {
     method: 'POST', 
